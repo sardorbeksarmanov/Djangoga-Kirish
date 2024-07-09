@@ -5,7 +5,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('book.urls')),  # Bu yerda `your_app` ni o'zingizning app nomingiz bilan almashtiring
+    path('', include('book.urls')),
+    path('', include('users.urls')),
 ]
 
 if settings.DEBUG:
