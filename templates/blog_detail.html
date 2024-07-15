@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Detail Page</title>
 </head>
 <body>
-$END$
+    <h1>WELCOME TO PLAYER</h1>
+    <h2>Title: {{ blog.title }}</h2>
+    {% if blog.image %}
+        <img src="{{ blog.image.url }}" alt="Blog Image" style="max-width:100%; height:auto;">
+    {% else %}
+        <p>No image available</p>
+    {% endif %}
+    <h3>Post: {{ blog.post }}</h3>
+
+    <a href="{% url 'blog' %}">Boshqa uyinlar ruyhati</a>
+
 </body>
 </html>

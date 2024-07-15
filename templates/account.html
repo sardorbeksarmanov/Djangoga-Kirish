@@ -1,0 +1,19 @@
+<h1>Account</h1>
+
+<h2>Purchased Books</h2>
+<ul>
+    {% for book in purchased_books %}
+        <li>{{ book.book.title }} by {{ book.book.author }}</li>
+    {% empty %}
+        <li>No books purchased yet.</li>
+    {% endfor %}
+</ul>
+
+<h2>Wishlist</h2>
+<ul>
+    {% for book in wishlist_books %}
+        <li>{{ book.book.title }} by {{ book.book.author }}</li>
+    {% empty %}
+        <li>No books in wishlist yet.</li>
+    {% endfor %}
+</ul>

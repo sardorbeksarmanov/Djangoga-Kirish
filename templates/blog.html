@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .item {
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+        }
+        .item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <h1>UYINLAR RUYHATI!</h1> <br>
+    <h2>Uzingiz yoqtirgan uyinga tashrif buyuring 👇</h2>
+
+    <div class="container">
+        {% for blog in blogs %}
+        <div class="item">
+            <a href="{% url 'blog-detail' blog.id %}">{{ blog.title }}</a> <br>
+            <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+        </div>
+        {% endfor %}
+    </div>
 </body>
 </html>

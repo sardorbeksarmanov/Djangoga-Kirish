@@ -18,6 +18,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = 'login'
 
 # Application definition
 
@@ -31,7 +32,8 @@ INSTALLED_APPS = [
     # apps
     'book',
     'import_export',
-    'users'
+    'users',
+    'blog',
 ]
 
 MIDDLEWARE = [
